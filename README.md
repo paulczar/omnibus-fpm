@@ -3,6 +3,8 @@
 This project creates full-stack platform-specific packages for
 `fpm`!
 
+_I had to patch libiconv.rb to build on my system for ruby.  I did it dirty, then found this, so used it instead.  https://github.com/opscode/omnibus-software/pull/14/files.   @mattray please take his pull request._
+
 ## Installation
 
 We'll assume you have Ruby 1.9+ and Bundler installed. First ensure all
@@ -100,3 +102,9 @@ $ vagrant up PLATFORM
 
 The complete list of valid platform names can be viewed with the
 `vagrant status` command.
+
+Notes:
+======
+
+* threw this together real quick late at night ...  not fully tested.
+* do `command "yum -y install make gcc rpm-build"` if ohai.platform is rhel ...  is this sensible?  

@@ -12,6 +12,9 @@ function error_exit
   exit 1
 }
 
-echo "Thank you for installing fpm!"
 
+echo "Thank you for installing fpm!"
+echo "If you want to build RPMs you'll"
+echo "probably need to run: "
+echo "yum -y install gcc rpm-build make"
 exit 0

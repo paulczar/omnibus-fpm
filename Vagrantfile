@@ -41,7 +41,8 @@ Vagrant.configure("2") do |config|
 
   config.vm.define 'centos-6' do |c|
     c.berkshelf.berksfile_path = "./Berksfile"
-    c.vm.box = "opscode-centos-6.3"
+    #c.vm.box = "opscode-centos-6.3"
+    c.vm.box = "centos64"
     c.vm.box_url = "http://opscode-vm.s3.amazonaws.com/vagrant/opscode_centos-6.3_chef-11.2.0.box"
   end
 

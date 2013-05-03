@@ -22,6 +22,5 @@ dependency "ruby"
 dependency "rubygems"
 
 build do
-  command "yum -y install gcc rpm-build make" if  OHAI.platform_family == "rhel"
   gem "install fpm -n #{install_dir}/bin --no-rdoc --no-ri -v #{version}"
 end
